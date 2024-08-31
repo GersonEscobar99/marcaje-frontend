@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <!-- <span>Sistema de Marcaje</span> -->
+  <a *ngIf="!loginService.isUserAuthenticated()" [routerLink]="'home'" mat-button >Sistema de marcaje</a>
+  <span class="example-spacer"></span>
+  <div class="auth-buttons">
+    <a *ngIf="!loginService.isUserAuthenticated()" [routerLink]="'/auth/login'" mat-button >Iniciar sesión</a>
+    <a *ngIf="loginService.isUserAuthenticated()" (click)="logout()" mat-button >Salir</a>
+  </div>
+</mat-toolbar>

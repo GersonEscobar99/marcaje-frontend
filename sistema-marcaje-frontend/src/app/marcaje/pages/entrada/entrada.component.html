@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-2">
+    <marcaje-sidebar></marcaje-sidebar>
+
+  </div>
+  <div class="col-md-10">
+
+    <div class="container mt-5">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center">Registro de Entrada</h1>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="registrarEntrada()">
+              <div class="form-group">
+                <label for="horaEntrada">Hora Actual:</label>
+                <input type="text" id="horaEntrada" class="form-control" [value]="horaActual" readonly>
+              </div>
+              <button type="submit" class="btn btn-primary me-3 mt-3" [disabled]="!registrarEntrada">Registrar</button>
+              <button class="btn btn-secondary me-3 mt-3" (click)="salir()">Salir</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,26 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav-content #sidenav mode="side" opened>
+    <mat-nav-list>
+      <mat-list-item>
+        <a mat-button (click)="onLogout()">
+          <mat-icon>logout</mat-icon>
+          
+          Salir</a>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon>group</mat-icon>
+        <a mat-button (click)="form()">Registrar Marcaje</a>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon>group</mat-icon>
+        <a mat-button routerLink="/marcajes/listaUsuarios">Lista Empleados</a>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon>list</mat-icon>
+        <a mat-button routerLink="/marcajes/historialMarcajes">Lista de Marcaje</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav-content>
+</mat-sidenav-container>

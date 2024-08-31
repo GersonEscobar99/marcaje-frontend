@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-2">
+      <marcaje-sidebar></marcaje-sidebar>
+    </div>
+  
+    <div class="col-md-10">
+  
+      <div class="container mt-5">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="mb-0 text-center">Lista de Marcaje</h2>
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered table-hover">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Fecha</th>
+                  <th>Entrada</th>
+                  <th>Salida</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let marca of marcajes; let i = index">
+                  <td>{{ marca.id}}</td>
+                  <td>{{marca.horaEntrada ? obtenerFecha(marca.horaEntrada): 'No registrada' }}</td>
+                  <td>{{ marca.horaEntrada ? obtenerHora(marca.horaEntrada) : 'No Registrada' }}</td>
+                  <td>{{ marca.horaSalida ? obtenerHora(marca.horaSalida) : 'No Registrada' }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-between">
+              <button (click)="paginaAnterior()" [disabled]="currentPage === 0" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left">Anterior</i>
+              </button>
+              <button (click)="siguientePagina()" [disabled]="currentPage === totalPages - 1" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-right">Siguiente</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    

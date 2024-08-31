@@ -1,0 +1,19 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.auth-buttons a {
+  margin-left: 16px; 
+  text-transform: none; 
+  text-decoration: none !important;
+  color: white;
+}
+a{
+  text-decoration: none !important;
+  color: white;
+}

@@ -1,0 +1,41 @@
+/* marcaje-sidebar {
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+
+
+.container {
+  margin-top: 20px;
+}
+
+.button-group {
+  margin-top: 20px; 
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
+}
+
+
+
+.marcaje-card {
+  padding: 20px; 
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.button-group {
+  margin-top: 20px; 
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
+}
+ */
+
+.button{
+  margin-right: 20px;
+  margin: 20px;
+}

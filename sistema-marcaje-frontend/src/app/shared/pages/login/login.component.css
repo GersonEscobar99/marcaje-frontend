@@ -1,0 +1,16 @@
+.login-card {
+    padding: 20px; 
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .button-group {
+    margin-top: 20px; 
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+  }
+  

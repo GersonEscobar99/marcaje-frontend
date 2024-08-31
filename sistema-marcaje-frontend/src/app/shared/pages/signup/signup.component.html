@@ -1,0 +1,56 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row mt20">
+      <div class="col-md-6 offset-md-3">
+        <mat-card class="login-card">
+          <div class="container text-center">
+            <img src="../../../assets/agregar-usuario.png" width="100" height="100">
+          </div>
+          <h1 class="text-center">Agregar usuario</h1>
+          <form (ngSubmit)="formSubmit()">
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nombre:</mat-label>
+              <input [(ngModel)]="user.nombre" name="nombre" matInput placeholder="Ingrese el nombre" required>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Apellido:</mat-label>
+              <input [(ngModel)]="user.apellido" name="apellido" matInput placeholder="Ingrese el apellido" required>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Email:</mat-label>
+              <input [(ngModel)]="user.email" type="email" name="email" matInput placeholder="Ingrese el apellido"
+                required>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Telefono:</mat-label>
+              <input [(ngModel)]="user.telefono" type="number" name="telefono" matInput
+                placeholder="Ingrese número telefonico" required>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nombre de usuario:</mat-label>
+              <input [(ngModel)]="user.username" name="username" matInput placeholder="Ingrese el nombre de usuario"
+                required>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Contraseña:</mat-label>
+              <input [(ngModel)]="user.password" type="password" name="apellido" matInput
+                placeholder="Ingrese la contraseña" required>
+            </mat-form-field>
+
+            <div class="text-center button-group">
+              <button mat-raised-button class="btn btn-success">Agregar</button>
+              <button type="reset" class="btn btn-secondary ms-3"
+                [routerLink]="['/marcajes/listaUsuarios']">Regresar</button>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

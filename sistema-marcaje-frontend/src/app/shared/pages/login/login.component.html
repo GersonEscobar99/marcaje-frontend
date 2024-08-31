@@ -1,0 +1,32 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row mt20">
+      <div class="col-md-6 offset-md-3">
+        <mat-card class="login-card">
+          <div class="container text-center">
+            <img src="../../../assets/login.png" width="100" height="100">
+          </div>
+          <h1 class="text-center">Inicio de sesión</h1>
+          <form (ngSubmit)="formSubmit()">
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nombre de usuario:</mat-label>
+              <input [(ngModel)]="loginData.username" name="username" matInput placeholder="Ingrese el usuario" required>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Contraseña:</mat-label>
+              <input [(ngModel)]="loginData.password" type="password" name="password" matInput placeholder="Ingrese la contraseña" required>
+            </mat-form-field>
+
+            <div class="text-center button-group">
+              <button mat-raised-button class="btn btn-primary">Iniciar sesión</button>
+              <button type="reset" class="btn btn-secondary" [routerLink]="['/home']">Regresar</button> 
+              
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

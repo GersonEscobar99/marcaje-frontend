@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-md-2">
+    <marcaje-sidebar></marcaje-sidebar>
+  </div>
+
+  <div class="col-md-10">
+
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="mb-0 text-center">Lista de Empleados</h2>
+          <button [routerLink]="['/signup']" class="btn btn-outline-light m-1">
+            Agregar usuario
+          </button>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th>#</th>
+                <th>Usuario</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let usuario of usuarios; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ usuario.username }}</td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.apellido }}</td>
+                <td>{{ usuario.email }}</td>
+                <td>{{ usuario.telefono }}</td>
+                <td>
+                  <a [routerLink]="['/marcajes/listaUsuarios', usuario.username]" class="btn btn-info m-1 color-withe">
+                    <i class="bi bi-eye"> </i>
+                  </a>
+                  <a [routerLink]="['/marcajes/editar', usuario.id]" class="btn btn-primary m-1">
+                    <i class="bi bi-pencil"></i>
+                  </a>
+                  <button (click)="eliminarUsuario(usuario.id!)" class="btn btn-danger m-1">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-between">
+            <button (click)="paginaAnterior()" [disabled]="currentPage === 0" class="btn btn-outline-secondary">
+              <i class="bi bi-arrow-left">Anterior</i>
+            </button>
+            <button (click)="siguientePagina()" [disabled]="currentPage === totalPages - 1" class="btn btn-outline-secondary">
+              <i class="bi bi-arrow-right">Siguiente</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  

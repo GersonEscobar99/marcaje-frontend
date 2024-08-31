@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-sm" *ngIf="user">
+        <div class="card-header bg-primary text-white text-center">
+          <h3 class="mb-0">Detalle de Usuario</h3>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Nombre:</strong> {{ user.nombre }}
+            </li>
+            <li class="list-group-item">
+              <strong>Apellido:</strong> {{ user.apellido }}
+            </li>
+            <li class="list-group-item">
+              <strong>Username:</strong> {{ user.username }}
+            </li>
+            <li class="list-group-item">
+              <strong>Email:</strong> {{ user.email }}
+            </li>
+            <li class="list-group-item">
+              <strong>Teléfono:</strong> {{ user.telefono }}
+            </li>
+            <li class="list-group-item">
+              <strong>Perfil:</strong> {{ user.perfil }}
+            </li>
+            <li class="list-group-item">
+              <strong>Estado:</strong>
+              <span class="badge" [ngClass]="user.enabled ? 'bg-success' : 'bg-danger'">
+                {{ user.enabled ? 'Activo' : 'Inactivo' }}
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn btn-outline-secondary" [routerLink]="['/marcajes/listaUsuarios']">Regresar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

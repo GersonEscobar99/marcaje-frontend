@@ -1,0 +1,19 @@
+
+marcaje-sidebar {
+    display: block;
+    position: relative;
+    z-index: 1000;
+  }
+  
+
+  .container {
+    margin-top: 20px;
+  }
+  
+  .button-group {
+    margin-top: 20px; 
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+  }
+  

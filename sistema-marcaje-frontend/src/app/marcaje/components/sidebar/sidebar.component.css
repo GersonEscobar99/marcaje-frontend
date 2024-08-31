@@ -1,0 +1,26 @@
+.example-container {
+  height: 100vh;
+}
+
+mat-sidenav {
+  width: 250px; /* Ancho fijo para el sidebar */
+}
+
+mat-sidenav-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Evita el desplazamiento lateral */
+}
+
+.sticky-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.content {
+  flex-grow: 1;
+  overflow-y: auto; /* Habilita el desplazamiento vertical solo en el contenido */
+  padding: 16px;
+}

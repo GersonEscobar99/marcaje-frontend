@@ -1,0 +1,39 @@
+.table {
+    margin-bottom: 0;
+  }
+  
+  .table th, .table td {
+    text-align: center;
+  }
+  
+  .card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-footer {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    border-radius: 0.25rem;
+  }
+  
+  .btn-secondary:disabled {
+    background-color: #c6c6c6;
+  }
+  
